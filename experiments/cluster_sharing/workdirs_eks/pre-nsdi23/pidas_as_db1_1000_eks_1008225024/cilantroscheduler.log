@@ -1,0 +1,196 @@
+10-08 22:50:24 | INFO   | __main__                                 || Created Env: Env(#nodes=2, #leaf-nodes=1):: (db1j1, e1.00, t0.95)..
+in root -1
+lf root--db1j1 1 0.95 -1
+10-08 22:50:24 | INFO   | root                                     || Created Env: Env(#nodes=2, #leaf-nodes=1):: (db1j1, e1.00, t0.95).,
+in root -1
+lf root--db1j1 1 0.95 -1
+
+10-08 22:50:24 | INFO   | root                                     || Loading profiled information from /cilantro/demos/exp1/profiled_oct7.
+10-08 22:50:24 | INFO   | cilantro.profiling.profiled_info_loader  || workload_type: craydb1, <cilantro.profiling.profiled_info_loader.ProfiledInfo object at 0x7eff6311b7d0>
+10-08 22:50:24 | INFO   | root                                     || 
+ Estimated p50 total demand = 147.000
+root--db1j1 (craydb1): 146.261  (ud=3.46258, p50_load=42.24)
+Estimated p99 total demand = 172.000
+root--db1j1 (craydb1): 171.753  (ud=3.46258, p99_load=49.60)
+10-08 22:50:27 | INFO   | __main__                                 || Initialised policy <cilantro.policies.as_baselines.PIDAutoScaler object at 0x7eff470a1450>.
+10-08 22:50:27 | INFO   | cilantro.data_loggers.data_logger_bank   || Initiated writing to disk loop for data logger in dir workdirs/pidas_as_db1_1000_eks_1008225024.
+10-08 22:50:28 | INFO   | cilantro.workloads.k8s_workload_deployer || Deployed 4 kubernetes objects. Check dashboard for status.
+10-08 22:50:28 | INFO   | __main__                                 || Workload deployed!
+10-08 22:50:28 | WARNING | cilantro.backends.k8s.kubernetes_manager || Unable to convert threshold to float or value was not found while parsing k8s labels. Using default 1. Labels were {'app': 'root--db1j1', 'is_workload': 'true'}
+10-08 22:50:28 | WARNING | cilantro.backends.k8s.kubernetes_manager || Unable to convert app_weight to float or value was not found while parsing k8s labels. Using default 1. Labels were {'app': 'root--db1j1', 'is_workload': 'true'}
+10-08 22:50:28 | WARNING | cilantro.backends.k8s.kubernetes_manager || Unable to convert app_unit_demand to float or value was not found while parsing k8s labels. Using default 1. Labels were {'app': 'root--db1j1', 'is_workload': 'true'}
+/usr/local/lib/python3.7/site-packages/statsmodels/tsa/statespace/sarimax.py:868: UserWarning: Too few observations to estimate starting parameters for ARMA and trend. All parameters except for variances will be set to zeros.
+  ' zeros.' % warning_description)
+/usr/local/lib/python3.7/site-packages/statsmodels/tsa/statespace/sarimax.py:978: UserWarning: Non-invertible starting MA parameters found. Using zeros as starting parameters.
+  warn('Non-invertible starting MA parameters found.'
+10-08 22:53:08 | INFO   | cilantro.core.performance_recorder       || Returning zeros since len(data_batches)=1, leaf_data_lengths: {'root--db1j1': 0}
+10-08 22:54:28 | INFO   | cilantro.core.performance_recorder       || 
+pidas (217.1):: res-loss=0.146, fair_viol:(sum=0.146, max=0.146, mean=0.146), util_welf=0.176, egal_welf=0.176, avg_rew=0.167,  cost=1.000
+    - root--db1j1: util=0.176, rew=0.167 alloc=1.000, load=42.483, ud=3.463, time=214.535
+/cilantro/cilantro/core/performance_recorder.py:538: RuntimeWarning: invalid value encountered in double_scalars
+  ret = {fld: val/tot_time for fld, val in tot_vals.items()}
+10-08 22:58:28 | INFO   | cilantro.core.performance_recorder       || 
+pidas (457.8):: res-loss=0.137, fair_viol:(sum=0.137, max=0.137, mean=0.137), util_welf=0.175, egal_welf=0.175, avg_rew=0.167,  cost=1.750
+    - root--db1j1: util=0.175, rew=0.167 alloc=1.786, load=40.135, ud=3.463, time=441.717
+10-08 23:02:28 | INFO   | cilantro.core.performance_recorder       || 
+pidas (688.5):: res-loss=0.130, fair_viol:(sum=0.130, max=0.130, mean=0.130), util_welf=0.161, egal_welf=0.161, avg_rew=0.154,  cost=3.770
+    - root--db1j1: util=0.162, rew=0.154 alloc=3.850, load=38.728, ud=3.463, time=656.136
+10-08 23:06:28 | INFO   | cilantro.core.performance_recorder       || 
+pidas (924.5):: res-loss=0.127, fair_viol:(sum=0.127, max=0.127, mean=0.127), util_welf=0.370, egal_welf=0.370, avg_rew=0.377,  cost=7.960
+    - root--db1j1: util=0.388, rew=0.377 alloc=8.183, load=39.107, ud=3.463, time=870.523
+10-08 23:10:28 | INFO   | cilantro.core.performance_recorder       || 
+pidas (1171.6):: res-loss=0.121, fair_viol:(sum=0.121, max=0.121, mean=0.121), util_welf=0.529, egal_welf=0.529, avg_rew=0.466,  cost=12.640
+    - root--db1j1: util=0.484, rew=0.466 alloc=12.629, load=38.618, ud=3.463, time=1075.066
+10-08 23:14:29 | INFO   | cilantro.core.performance_recorder       || 
+pidas (1406.0):: res-loss=0.111, fair_viol:(sum=0.111, max=0.111, mean=0.111), util_welf=0.858, egal_welf=0.858, avg_rew=0.853,  cost=18.950
+    - root--db1j1: util=0.869, rew=0.853 alloc=19.070, load=37.449, ud=3.463, time=1290.480
+10-08 23:18:29 | INFO   | cilantro.core.performance_recorder       || 
+pidas (1658.9):: res-loss=0.110, fair_viol:(sum=0.110, max=0.110, mean=0.110), util_welf=0.674, egal_welf=0.674, avg_rew=0.662,  cost=21.620
+    - root--db1j1: util=0.686, rew=0.662 alloc=21.638, load=38.147, ud=3.463, time=1508.428
+10-08 23:22:29 | INFO   | cilantro.core.performance_recorder       || 
+pidas (1901.7):: res-loss=0.095, fair_viol:(sum=0.095, max=0.095, mean=0.095), util_welf=0.860, egal_welf=0.860, avg_rew=0.848,  cost=41.980
+    - root--db1j1: util=0.866, rew=0.848 alloc=42.606, load=39.653, ud=3.463, time=1736.050
+10-08 23:26:29 | INFO   | cilantro.core.performance_recorder       || 
+pidas (2121.4):: res-loss=0.096, fair_viol:(sum=0.096, max=0.096, mean=0.096), util_welf=0.737, egal_welf=0.737, avg_rew=0.722,  cost=44.230
+    - root--db1j1: util=0.744, rew=0.722 alloc=44.113, load=40.386, ud=3.463, time=1941.144
+10-08 23:30:29 | INFO   | cilantro.core.performance_recorder       || 
+pidas (2354.8):: res-loss=0.091, fair_viol:(sum=0.091, max=0.091, mean=0.091), util_welf=0.932, egal_welf=0.932, avg_rew=0.914,  cost=45.440
+    - root--db1j1: util=0.924, rew=0.914 alloc=46.729, load=39.216, ud=3.463, time=2141.927
+10-08 23:34:30 | INFO   | cilantro.core.performance_recorder       || 
+pidas (2580.9):: res-loss=0.092, fair_viol:(sum=0.092, max=0.092, mean=0.092), util_welf=0.964, egal_welf=0.964, avg_rew=0.950,  cost=47.000
+    - root--db1j1: util=0.961, rew=0.950 alloc=46.884, load=40.113, ud=3.463, time=2343.410
+10-08 23:38:30 | INFO   | cilantro.core.performance_recorder       || 
+pidas (2824.7):: res-loss=0.111, fair_viol:(sum=0.111, max=0.111, mean=0.111), util_welf=0.827, egal_welf=0.827, avg_rew=0.821,  cost=43.520
+    - root--db1j1: util=0.839, rew=0.821 alloc=43.713, load=44.990, ud=3.463, time=2565.373
+10-08 23:42:30 | INFO   | cilantro.core.performance_recorder       || 
+pidas (3045.7):: res-loss=0.110, fair_viol:(sum=0.110, max=0.110, mean=0.110), util_welf=0.771, egal_welf=0.771, avg_rew=0.773,  cost=41.770
+    - root--db1j1: util=0.787, rew=0.773 alloc=41.645, load=43.756, ud=3.463, time=2759.154
+10-08 23:46:30 | INFO   | cilantro.core.performance_recorder       || 
+pidas (3284.3):: res-loss=0.094, fair_viol:(sum=0.094, max=0.094, mean=0.094), util_welf=0.888, egal_welf=0.888, avg_rew=0.904,  cost=52.310
+    - root--db1j1: util=0.915, rew=0.904 alloc=53.071, load=42.283, ud=3.463, time=2957.980
+10-08 23:50:30 | INFO   | cilantro.core.performance_recorder       || 
+pidas (3528.2):: res-loss=0.095, fair_viol:(sum=0.095, max=0.095, mean=0.095), util_welf=0.830, egal_welf=0.830, avg_rew=0.818,  cost=48.500
+    - root--db1j1: util=0.842, rew=0.818 alloc=48.296, load=41.279, ud=3.463, time=3187.783
+10-08 23:54:31 | INFO   | cilantro.core.performance_recorder       || 
+pidas (3765.7):: res-loss=0.114, fair_viol:(sum=0.114, max=0.114, mean=0.114), util_welf=0.788, egal_welf=0.788, avg_rew=0.747,  cost=43.670
+    - root--db1j1: util=0.763, rew=0.747 alloc=43.692, load=45.392, ud=3.463, time=3393.017
+10-08 23:58:31 | INFO   | cilantro.core.performance_recorder       || 
+pidas (4005.3):: res-loss=0.088, fair_viol:(sum=0.088, max=0.088, mean=0.088), util_welf=0.768, egal_welf=0.768, avg_rew=0.767,  cost=57.080
+    - root--db1j1: util=0.783, rew=0.767 alloc=57.684, load=41.911, ud=3.463, time=3615.252
+10-09 00:02:31 | INFO   | cilantro.core.performance_recorder       || 
+pidas (4246.0):: res-loss=0.072, fair_viol:(sum=0.072, max=0.072, mean=0.072), util_welf=0.933, egal_welf=0.933, avg_rew=0.909,  cost=74.930
+    - root--db1j1: util=0.926, rew=0.909 alloc=74.911, load=42.436, ud=3.463, time=3823.966
+10-09 00:06:31 | INFO   | cilantro.core.performance_recorder       || 
+pidas (4493.2):: res-loss=0.061, fair_viol:(sum=0.061, max=0.061, mean=0.061), util_welf=0.888, egal_welf=0.888, avg_rew=0.873,  cost=83.000
+    - root--db1j1: util=0.887, rew=0.873 alloc=83.000, load=41.657, ud=3.463, time=4066.953
+10-09 00:10:31 | INFO   | cilantro.core.performance_recorder       || 
+pidas (4727.4):: res-loss=0.060, fair_viol:(sum=0.060, max=0.060, mean=0.060), util_welf=0.929, egal_welf=0.929, avg_rew=0.918,  cost=83.000
+    - root--db1j1: util=0.928, rew=0.918 alloc=83.000, load=41.421, ud=3.463, time=4297.270
+10-09 00:14:32 | INFO   | cilantro.core.performance_recorder       || 
+pidas (4948.1):: res-loss=0.060, fair_viol:(sum=0.060, max=0.060, mean=0.060), util_welf=0.907, egal_welf=0.907, avg_rew=0.904,  cost=85.740
+    - root--db1j1: util=0.921, rew=0.904 alloc=85.816, load=42.098, ud=3.463, time=4500.085
+10-09 00:18:32 | INFO   | cilantro.core.performance_recorder       || 
+pidas (5199.6):: res-loss=0.049, fair_viol:(sum=0.049, max=0.049, mean=0.049), util_welf=0.978, egal_welf=0.978, avg_rew=0.968,  cost=90.110
+    - root--db1j1: util=0.976, rew=0.968 alloc=90.117, load=39.979, ud=3.463, time=4734.136
+10-09 00:22:32 | INFO   | cilantro.core.performance_recorder       || 
+pidas (5427.2):: res-loss=0.048, fair_viol:(sum=0.048, max=0.048, mean=0.048), util_welf=0.917, egal_welf=0.917, avg_rew=0.900,  cost=94.540
+    - root--db1j1: util=0.912, rew=0.900 alloc=94.739, load=41.223, ud=3.463, time=4943.654
+10-09 00:26:32 | INFO   | cilantro.core.performance_recorder       || 
+pidas (5656.2):: res-loss=0.039, fair_viol:(sum=0.039, max=0.039, mean=0.039), util_welf=0.911, egal_welf=0.911, avg_rew=0.885,  cost=103.290
+    - root--db1j1: util=0.904, rew=0.885 alloc=103.565, load=41.275, ud=3.463, time=5154.701
+10-09 00:30:32 | INFO   | cilantro.core.performance_recorder       || 
+pidas (5901.8):: res-loss=0.015, fair_viol:(sum=0.015, max=0.015, mean=0.015), util_welf=0.986, egal_welf=0.986, avg_rew=0.976,  cost=125.360
+    - root--db1j1: util=0.984, rew=0.976 alloc=125.585, load=40.439, ud=3.463, time=5373.695
+10-09 00:34:33 | INFO   | cilantro.core.performance_recorder       || 
+pidas (6131.8):: res-loss=0.007, fair_viol:(sum=0.007, max=0.007, mean=0.007), util_welf=0.951, egal_welf=0.951, avg_rew=0.947,  cost=132.990
+    - root--db1j1: util=0.957, rew=0.947 alloc=133.028, load=40.518, ud=3.463, time=5587.207
+10-09 00:38:33 | INFO   | cilantro.core.performance_recorder       || 
+pidas (6371.8):: res-loss=0.005, fair_viol:(sum=0.005, max=0.005, mean=0.005), util_welf=0.905, egal_welf=0.905, avg_rew=0.893,  cost=137.560
+    - root--db1j1: util=0.907, rew=0.893 alloc=137.677, load=40.816, ud=3.463, time=5810.403
+10-09 00:42:33 | INFO   | cilantro.core.performance_recorder       || 
+pidas (6593.4):: res-loss=0.002, fair_viol:(sum=0.002, max=0.002, mean=0.002), util_welf=0.878, egal_welf=0.878, avg_rew=0.873,  cost=141.450
+    - root--db1j1: util=0.894, rew=0.873 alloc=141.528, load=40.655, ud=3.463, time=6017.018
+10-09 00:46:33 | INFO   | cilantro.core.performance_recorder       || 
+pidas (6836.1):: res-loss=0.001, fair_viol:(sum=0.001, max=0.001, mean=0.001), util_welf=0.958, egal_welf=0.958, avg_rew=0.941,  cost=180.400
+    - root--db1j1: util=0.953, rew=0.941 alloc=183.440, load=41.674, ud=3.463, time=6233.290
+10-09 00:50:33 | INFO   | cilantro.core.performance_recorder       || 
+pidas (7070.5):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.922, egal_welf=0.922, avg_rew=0.906,  cost=194.000
+    - root--db1j1: util=0.921, rew=0.906 alloc=194.000, load=41.742, ud=3.463, time=6463.754
+10-09 00:54:34 | INFO   | cilantro.core.performance_recorder       || 
+pidas (7303.7):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.939, egal_welf=0.939, avg_rew=0.923,  cost=172.620
+    - root--db1j1: util=0.932, rew=0.923 alloc=171.983, load=45.260, ud=3.463, time=6668.328
+10-09 00:58:34 | INFO   | cilantro.core.performance_recorder       || 
+pidas (7550.0):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.977, egal_welf=0.977, avg_rew=0.965,  cost=165.000
+    - root--db1j1: util=0.974, rew=0.965 alloc=163.887, load=43.687, ud=3.463, time=6883.769
+10-09 01:02:34 | INFO   | cilantro.core.performance_recorder       || 
+pidas (7789.4):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.900, egal_welf=0.900, avg_rew=0.901,  cost=153.040
+    - root--db1j1: util=0.909, rew=0.901 alloc=153.014, load=42.205, ud=3.463, time=7109.360
+10-09 01:06:34 | INFO   | cilantro.core.performance_recorder       || 
+pidas (8018.4):: res-loss=0.011, fair_viol:(sum=0.011, max=0.011, mean=0.011), util_welf=0.870, egal_welf=0.870, avg_rew=0.841,  cost=138.460
+    - root--db1j1: util=0.860, rew=0.841 alloc=137.860, load=42.703, ud=3.463, time=7322.063
+10-09 01:10:34 | INFO   | cilantro.core.performance_recorder       || 
+pidas (8252.8):: res-loss=0.010, fair_viol:(sum=0.010, max=0.010, mean=0.010), util_welf=0.906, egal_welf=0.906, avg_rew=0.877,  cost=141.720
+    - root--db1j1: util=0.897, rew=0.877 alloc=142.269, load=42.539, ud=3.463, time=7528.695
+10-09 01:14:35 | INFO   | cilantro.core.performance_recorder       || 
+pidas (8485.8):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.938, egal_welf=0.938, avg_rew=0.925,  cost=178.200
+    - root--db1j1: util=0.942, rew=0.925 alloc=179.052, load=43.041, ud=3.463, time=7745.139
+10-09 01:18:35 | INFO   | cilantro.core.performance_recorder       || 
+pidas (8725.1):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.953, egal_welf=0.953, avg_rew=0.938,  cost=188.930
+    - root--db1j1: util=0.950, rew=0.938 alloc=188.960, load=42.831, ud=3.463, time=7969.697
+10-09 01:22:35 | INFO   | cilantro.core.performance_recorder       || 
+pidas (8955.6):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.927, egal_welf=0.927, avg_rew=0.906,  cost=189.140
+    - root--db1j1: util=0.922, rew=0.906 alloc=189.046, load=42.493, ud=3.463, time=8185.638
+10-09 01:26:35 | INFO   | cilantro.core.performance_recorder       || 
+pidas (9182.3):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.945, egal_welf=0.945, avg_rew=0.926,  cost=183.880
+    - root--db1j1: util=0.948, rew=0.926 alloc=183.593, load=42.000, ud=3.463, time=8396.662
+10-09 01:30:35 | INFO   | cilantro.core.performance_recorder       || 
+pidas (9416.5):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.921, egal_welf=0.921, avg_rew=0.900,  cost=170.080
+    - root--db1j1: util=0.918, rew=0.900 alloc=170.005, load=42.270, ud=3.463, time=8616.296
+10-09 01:34:36 | INFO   | cilantro.core.performance_recorder       || 
+pidas (9647.6):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.932, egal_welf=0.932, avg_rew=0.922,  cost=165.720
+    - root--db1j1: util=0.937, rew=0.922 alloc=165.658, load=43.509, ud=3.463, time=8833.148
+10-09 01:38:36 | INFO   | cilantro.core.performance_recorder       || 
+pidas (9882.0):: res-loss=0.001, fair_viol:(sum=0.001, max=0.001, mean=0.001), util_welf=0.982, egal_welf=0.982, avg_rew=0.975,  cost=156.070
+    - root--db1j1: util=0.980, rew=0.975 alloc=155.820, load=42.422, ud=3.463, time=9053.433
+10-09 01:42:36 | INFO   | cilantro.core.performance_recorder       || 
+pidas (10111.1):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.966, egal_welf=0.966, avg_rew=0.958,  cost=153.990
+    - root--db1j1: util=0.964, rew=0.958 alloc=154.014, load=42.412, ud=3.463, time=9267.594
+10-09 01:46:36 | INFO   | cilantro.core.performance_recorder       || 
+pidas (10347.4):: res-loss=0.008, fair_viol:(sum=0.008, max=0.008, mean=0.008), util_welf=0.953, egal_welf=0.953, avg_rew=0.939,  cost=142.800
+    - root--db1j1: util=0.949, rew=0.939 alloc=142.302, load=42.996, ud=3.463, time=9489.197
+10-09 01:50:36 | INFO   | cilantro.core.performance_recorder       || 
+pidas (10582.8):: res-loss=0.006, fair_viol:(sum=0.006, max=0.006, mean=0.006), util_welf=0.920, egal_welf=0.920, avg_rew=0.897,  cost=148.400
+    - root--db1j1: util=0.912, rew=0.897 alloc=148.773, load=42.641, ud=3.463, time=9705.725
+10-09 01:54:37 | INFO   | cilantro.core.performance_recorder       || 
+pidas (10805.3):: res-loss=0.003, fair_viol:(sum=0.003, max=0.003, mean=0.003), util_welf=0.889, egal_welf=0.889, avg_rew=0.890,  cost=171.680
+    - root--db1j1: util=0.903, rew=0.890 alloc=172.328, load=45.437, ud=3.463, time=9906.837
+10-09 01:58:37 | INFO   | cilantro.core.performance_recorder       || 
+pidas (11040.5):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.957, egal_welf=0.957, avg_rew=0.942,  cost=176.140
+    - root--db1j1: util=0.954, rew=0.942 alloc=176.074, load=43.229, ud=3.463, time=10127.313
+10-09 02:02:37 | INFO   | cilantro.core.performance_recorder       || 
+pidas (11286.1):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.903, egal_welf=0.903, avg_rew=0.886,  cost=172.000
+    - root--db1j1: util=0.901, rew=0.886 alloc=172.000, load=43.359, ud=3.463, time=10368.880
+10-09 02:06:37 | INFO   | cilantro.core.performance_recorder       || 
+pidas (11514.8):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.967, egal_welf=0.967, avg_rew=0.952,  cost=182.880
+    - root--db1j1: util=0.964, rew=0.952 alloc=183.442, load=42.546, ud=3.463, time=10582.392
+10-09 02:10:38 | INFO   | cilantro.core.performance_recorder       || 
+pidas (11742.7):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.993, egal_welf=0.993, avg_rew=0.985,  cost=178.000
+    - root--db1j1: util=0.993, rew=0.985 alloc=177.601, load=43.425, ud=3.463, time=10793.078
+10-09 02:14:38 | INFO   | cilantro.core.performance_recorder       || 
+pidas (11982.1):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.922, egal_welf=0.922, avg_rew=0.905,  cost=157.280
+    - root--db1j1: util=0.914, rew=0.905 alloc=157.017, load=42.379, ud=3.463, time=11012.997
+10-09 02:18:38 | INFO   | cilantro.core.performance_recorder       || 
+pidas (12211.5):: res-loss=0.001, fair_viol:(sum=0.001, max=0.001, mean=0.001), util_welf=0.896, egal_welf=0.896, avg_rew=0.884,  cost=158.940
+    - root--db1j1: util=0.898, rew=0.884 alloc=159.113, load=42.753, ud=3.463, time=11228.118
+10-09 02:22:38 | INFO   | cilantro.core.performance_recorder       || 
+pidas (12449.7):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.920, egal_welf=0.920, avg_rew=0.896,  cost=192.420
+    - root--db1j1: util=0.915, rew=0.896 alloc=193.418, load=43.333, ud=3.463, time=11451.226
+10-09 02:26:38 | INFO   | cilantro.core.performance_recorder       || 
+pidas (12682.0):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.898, egal_welf=0.898, avg_rew=0.896,  cost=204.060
+    - root--db1j1: util=0.909, rew=0.896 alloc=204.229, load=43.590, ud=3.463, time=11664.484
+10-09 02:30:39 | INFO   | cilantro.core.performance_recorder       || 
+pidas (12912.1):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.944, egal_welf=0.944, avg_rew=0.925,  cost=205.380
+    - root--db1j1: util=0.940, rew=0.925 alloc=205.186, load=43.220, ud=3.463, time=11879.155
+10-09 02:34:39 | INFO   | cilantro.core.performance_recorder       || 
+pidas (13149.0):: res-loss=0.000, fair_viol:(sum=0.000, max=0.000, mean=0.000), util_welf=0.901, egal_welf=0.901, avg_rew=0.873,  cost=235.000
+    - root--db1j1: util=0.885, rew=0.873 alloc=238.559, load=43.379, ud=3.463, time=12085.384
