@@ -117,10 +117,6 @@ If you do not have access cloud or a kubernetes cluster, you can use kind to pro
     python plot_results.py
     ```
    You should see a plot like this:
-    
-    <p align="left">
-      <picture>
-          <img alt="Cilantro Architecture" src="https://raw.githubusercontent.com/romilbhardwaj/cilantro/main/experiments/microservices/workdirs_eks/ms_exp.png" width=300px>
-      </picture>
-    </p>
+
+   <img src="https://raw.githubusercontent.com/romilbhardwaj/cilantro/main/experiments/microservices/workdirs_eks/ms_exp.png"  width="300">
 
